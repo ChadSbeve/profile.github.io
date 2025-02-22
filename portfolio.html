@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makara's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            background-color: #10273b;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            margin: 0;
+            padding:0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            max-width: auto;
+            padding: 20px;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #39607b;
+            padding: 20px 30px;
+            display:flex;
+            justify-content:space-evenly;
+            z-index: 1000;
+        }
+        .title{
+            text-align: left;
+            font-size: 10px;
+            font-family: cursive;
+        }
+        .name{
+            font-size: 40px;
+        }
+        .container img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgb(255, 255, 255);
+            transition: transform 0.3s ease-in-out; 
+        }
+        .container img:hover{
+            transform: scale(1.1); 
+        }
+        #about {
+            border-radius: 20px 20px 20px 20px;
+            margin-top: 150px;
+            background-color: #2c3e50; /* Dark Blue */
+            color: white;
+            padding: 20px 20px;
+        }
+
+        #gallery {
+            background-image: url('gallery-bg.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 20px 20px;
+            position: static;
+            overflow: hidden; 
+        
+        }
+
+        #background {
+            border-radius: 20px 20px 20px 20px;
+            background-color: #2b3d57; /* Teal */
+            color: rgb(255, 255, 255);
+            border-radius: round;
+            padding: 20px 20px;
+        }
+
+        #contact {
+            border-radius: 20px 20px 20px 20px;
+            background-color: #34495e; /* Dark Gray */
+            color: white;
+            padding: 20px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 50px 0;
+        }
+        .swiper-container {
+            width: 60%;
+            margin: auto;
+            overflow: hidden; 
+            position: static; 
+            z-index: 1; 
+        }
+        
+        .swiper-slide img {
+            width: 80%;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out; 
+
+        }
+
+        .swiper-slide img:hover {
+            transform: scale(1.1); 
+
+            position: static;
+            overflow: hidden;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 50%;
+            margin: auto;
+        }
+        input, textarea, button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #4789f4;
+            color: #fff;
+            cursor: pointer;
+        }
+        @media screen and (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+}
+    </style>
+</head>
+<body>
+    <header >
+        
+        <div class="title">
+            <h1>Portfolio</h1>
+        </div>
+       
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#background">Background</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="container">
+        <img src="pfp1.jpg" alt="profile">
+        <div class="name">
+            <h1> Hello! I am Tes Chanmakara</h1>
+        </div>
+        
+        <h2>About Me</h2>
+        
+        <p>Welcome to my portfolio. I'm a Frontend Developer. I have a passion for web design and love to create for web and mobile devices. I have a strong foundation in web technologies and languages such as HTML, CSS, JavaScript, and React. I am always looking to learn new technologies and improve my skills..</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="cat.jpg" alt="Artwork 1"></div>
+                <div class="swiper-slide"><img src="cat.jpg" alt="Artwork 2"></div>
+                <div class="swiper-slide"><img src="cat.jpg" alt="Artwork 3"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section id="background" class="container">
+        <h2>Background</h2>
+        <p>I am a passionate Front-End Developer with a strong foundation in HTML, CSS, JavaScript, and modern frameworks like React and Vue.js. My expertise lies in building responsive, user-friendly, and visually appealing web interfaces that enhance the digital experience.
+
+            With a keen eye for design and functionality, I specialize in transforming ideas into interactive, high-performance web applications. I have experience working with CSS preprocessors (SASS/LESS), version control (Git/GitHub), and API integrations, ensuring seamless collaboration with back-end teams.
+            
+            I am continuously expanding my skill set by exploring the latest front-end technologies and best practices. My goal is to create intuitive and accessible web solutions that provide users with a seamless and engaging experience.</p>
+    </section>
+
+
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p>Follow me on social media: <a href="https://www.instagram.com/makara.chan.t/" target="_blank">Instagram</a> | <a href="https://www.facebook.com/ChadSbeve69/" target="_blank">Facebook</a></p>
+    </section>
+</body>
+</html>
